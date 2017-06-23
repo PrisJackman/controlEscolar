@@ -2,8 +2,8 @@
 
 @section('contenido')
 <div class="jumbotron">
-  <h1>Jumbotron</h1>
-  <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-  <p><a class="btn btn-primary btn-lg">Learn more</a></p>
+  <h1>Sistema de Control Escolar</h1>
+  <p>Este es un proyecto web para el control escolar</p>
+  <p><a class="btn btn-primary btn-lg">Mas...</a></p>
 </div>
 @stop

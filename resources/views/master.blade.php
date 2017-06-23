@@ -30,7 +30,7 @@
 		          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu Principal <span class="caret"></span></a>
 		          <ul class="dropdown-menu">
 		            <li><a href="{{url('/registrarAlumno')}}">Registrar Alumno</a></li>
-		            <li><a href="{{url('/consultarAlumnos')}}}">Consultar Alumnos</a></li>
+		            <li><a href="{{url('/consultarAlumnos')}}">Consultar Alumnos</a></li>
 		            <li role="separator" class="divider"></li>
 		            <li><a href="#">Separated link</a></li>
 		            <li role="separator" class="divider"></li>
