@@ -17,7 +17,7 @@
 	</div>
 	<div class="form-group">
 		<label for="sexo">Sexo:</label>
-		<select name="sexo" class="form-contorl">
+		<select name="sexo" class="form-control">
 		 @if($alumno->sexo==0)
 		 	<option value="0" selected="">Femenino</option>
 			<option value="1">Masculino</option>

@@ -21,11 +21,12 @@ class alumnosController extends Controller
     	$alumno->sexo=$datos->input('sexo');
     	$alumno->carrera_id=$datos->input('carrera');
     	$alumno->save();
+        flash('¡Se guardaron exitósamente los datos')->success();
     	return redirect('/consultarAlumnos');
     }
 
     public function consultar(){
-    	//$alumnos=Alumnos::paginate(5);
+    	
     	$alumnos=DB::table('alumnos')
     		->join('carrera','alumnos.carrera_id','=','carrera.id')
     		->select('alumnos.*','carrera.nombre AS nom_carrera')
@@ -60,5 +61,14 @@ class alumnosController extends Controller
     	$alumno->save();
 
     	return redirect('consultarAlumnos');
+    }
+
+    public function pdf(){
+        $alumnos=Alumnos::all();
+        $vista=view('alumnosPDF',compact('alumnos'));
+
+        $pdf=\App::make ('dompdf.wrapper');
+        $pdf->loadHTML($vista);
+        return $pdf->stream('ListaAlumnos.pdf');
     }
 }

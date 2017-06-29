@@ -1,20 +1,25 @@
 @extends('master')
 
 @section('contenido')
+@include ('flash::message')
 	<table class="table table-striped">
 		<thead>
 			<tr>
 				<th>ID</th>
 				<th>Nombre</th>
+				<th>Numero de control</th>
 				<th>Edad</th>
 				<th>Sexo</th>
 				<th>Carrera</th>
-				<th>Opciones</th>
+				<th>
+					<a href="{{url('/pdfAlumnos')}}">PDF</a>
+				</th>
 			</tr>
 			@foreach($alumnos as $a)
 			<tr>
 				<td>{{$a->id}}</td>
 				<td>{{$a->nombre}}</td>
+				<td>{{$a->numero_control}}</td>
 				<td>{{$a->edad}}</td>
 				<td>
 					@if($a->sexo==0)
@@ -25,6 +30,9 @@
 				</td>
 				<td>{{$a->nom_carrera}}</td>
 				<td>
+					<a href="{{url('/cargarMaterias')}}" class="btn btn-success btn-xs">
+					<span class="glyphicon glyphicon-plus"></span>
+					</a>
 					<a href="{{url('/editarAlumno')}}/{{$a->id}}" class="btn  btn-primary btn-xs">
 						 <span class="glyphicon  glyphicon-pencil" aria-hidden="true"></span>
 					</a>
@@ -39,4 +47,9 @@
 	<div class="text-center">
 		{{$alumnos->links()}}
 	</div>
+	<script type="text/javascript">
+		setTimeout(function()) {
+			$(".alert").fadeOut(1500);
+		}1500);
+	</script>
 @stop

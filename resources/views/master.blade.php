@@ -31,10 +31,12 @@
 		          <ul class="dropdown-menu">
 		            <li><a href="{{url('/registrarAlumno')}}">Registrar Alumno</a></li>
 		            <li><a href="{{url('/consultarAlumnos')}}">Consultar Alumnos</a></li>
-		            <li role="separator" class="divider"></li>
-		            <li><a href="#">Separated link</a></li>
-		            <li role="separator" class="divider"></li>
-		            <li><a href="#">One more separated link</a></li>
+		            <li><a href="{{url('/registrarMaestros')}}">Registrar Maestros</a></li>
+		            <li><a href="{{url('/consultarMaestros')}}">Consultar Maestros</a></li>
+		            <li><a href="{{url('/registrarMaterias')}}">Registrar Materias</a></li>
+		            <li><a href="{{url('/consultarMaterias')}}">Consultar Materias</a></li>
+					<li><a href="{{url('/registrarGrupos')}}">Registrar Grupos</a></li>
+		            <li><a href="{{url('/consultarGrupos')}}">Consultar Grupos</a></li>
 		          </ul>
 		        </li>
 		      </ul>
