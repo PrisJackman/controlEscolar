@@ -65,7 +65,7 @@ class materiasController extends Controller
         ->pluck('grupos.id');
         
          $lista=DB::table('grupos')
-        ->whereNotInt('grupos.id',$gruposid)
+        ->whereNotIn('grupos.id',$gruposid)
         ->join('materias','materias.id','=','grupos.materia_id')
         ->join('maestros','maestros.id','=','grupos.maestro_id')
         ->select('grupos.id','materias.nombre','grupos.horario','grupos.salon')
@@ -80,7 +80,7 @@ class materiasController extends Controller
 
         return view ('cargarMaterias', compact('lista','materias','alumno'));  
     }
-    public function cargarGrupo($id,Request $datos){
+    public function cargarGrupo($id, Request $datos){
         $alumnos_grupos=new alumnos_grupos();
         $alumnos_grupos->alumno_id=$id;
         $alumnos_grupos->grupo_id=$datos->input('grupo_id');
@@ -94,4 +94,6 @@ class materiasController extends Controller
         ->delete();
         return redirect('/cargarMaterias/'.$id);
     }
+
+    
 }

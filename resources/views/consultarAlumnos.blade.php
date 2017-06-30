@@ -30,8 +30,8 @@
 				</td>
 				<td>{{$a->nom_carrera}}</td>
 				<td>
-					<a href="{{url('/cargarMaterias')}}" class="btn btn-success btn-xs">
-					<span class="glyphicon glyphicon-plus"></span>
+					<a href="{{url('/cargarMaterias')}}/{{$a->id}}" class="btn btn-success btn-xs">
+					<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
 					</a>
 					<a href="{{url('/editarAlumno')}}/{{$a->id}}" class="btn  btn-primary btn-xs">
 						 <span class="glyphicon  glyphicon-pencil" aria-hidden="true"></span>

@@ -42,6 +42,7 @@ Route::get('/consultarMaterias', "materiasController@consultar");
 Route::get('/editarMateria/{id}', "materiasController@editar");
 Route::get('/eliminarMateria/{id}', "materiasController@eliminar");
 Route::post('/actualizarMaterias/{id}', "materiasController@actualizar");
+
 Route::get('/cargarMaterias/{id}', "materiasController@cargar");
 Route::post('/cargarGrupo/{id}', "materiasController@cargarGrupo");
 Route::get('/bajarGrupo/{id}/{idg}', "materiasController@bajarGrupo");
