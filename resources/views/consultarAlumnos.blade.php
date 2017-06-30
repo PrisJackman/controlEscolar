@@ -44,12 +44,13 @@
 			@endforeach
 		</thead>
 	</table>
+	
 	<div class="text-center">
-		{{$alumnos->links()}}
+	{{ $alumnos->links() }}
 	</div>
 	<script type="text/javascript">
-		setTimeout(function()) {
-			$(".alert").fadeOut(1500);
-		}1500);
+	            setTimeout(function() {
+	                $(".alert").fadeOut(1500);
+	            },1500);
 	</script>
 @stop

@@ -56,3 +56,10 @@ Route::post('/actualizarGrupos/{id}', "gruposController@actualizar");
 Route::get('/pdfAlumnos','alumnosController@pdf');
 
 
+Route::get('/registrarAlumnosGrupos', "alumnosgruposController@registra");
+Route::post('/guardarAlumnoGrupo', "alumnosgruposController@guardar");
+Route::get('/consultarAlumnosGrupos', "alumnosgruposController@consultar");
+Route::get('/editarAlumnoGrupo/{id}', "alumnosgruposController@editar");
+Route::get('/eliminarAlumnoGrupo/{id}', "alumnosgruposController@eliminar");
+Route::post('/actualizarAlumnosGrupos/{id}', "alumnosgruposController@actualizar");
+
